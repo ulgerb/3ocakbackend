@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="../static/css/style.css"> <!-- Yanlış Kullanım -->
+   <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- Doğru Kullanım -->
+   
+   <style>
+      nav a {
+         font-size: 30px;
+      }
+   </style>
+</head>
+<body>
+   <nav>
+      <a href="/">Anasayfa</a>
+      <a href="/about">Hakkında</a>
+      <a href="/books">Kitaplar</a>
+   </nav>
+   <h1>Kütüphane</h1>
+   <h2>ÖDEV Product Modeli oluşturulcak başlık, tarih, fiyat, kategori bulunsun ve bunları sayfaya gönderin</h2>
+   <h2>ÖDEV static içerisindeki img dosyalarını sayfaya getirin</h2>
+   <h2>ÖDEV image olarak kayıtlı olan modeldeki objeleri media olarak sayfaya getirin</h2>
+   
+   {% for i in books %}
+   <div class="book">
+      <img src="{{ i.image.url }}" alt="">
+      <h4>{{ i.title }}</h4>
+      <p>{{ i.text }}</p>
+      <p>{{ i.date_start }}</p>
+      <h4>{{ i.price }}</h4>
+      <hr>
+   </div>
+   {% endfor %}
+      
+   
+</body>
+</html>

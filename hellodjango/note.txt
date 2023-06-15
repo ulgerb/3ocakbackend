@@ -1,0 +1,22 @@
+=== TERMİNAL KODLARI ===
+django-admin startproject projeadı => proje oluşturma
+python manage.py runserver => projeyi başlatma local çalıştırma
+python manage.py startapp appMy => projemize yeni bir uygulama oluşturur
+
+=== Projedeki ilk dosyalar (urls, settings) ===
+urls.py => HTML sayfalarımızın url isimlendirmelerini ve hangi fonksiyonun çalışacağını tanımlar.
+settings.py => projemizde ayarlar bölümüdür
+
+=== APP uygulama dosyaları (admin.py, models.py, views.py) === 
+models.py => SQL datamıza tablo yada model oluşturmak için kullanıyoruz.
+admin.py => oluşan modelleri ve admin paneli ile ilgili ayar yapabiliyoruz.
+views.py => HTML sayfalarına hangi bilgilerin ve hangi dataların gitmesini istiyorsak koşullarımız dahil burada yazıyoruz.
+
+=== HTML sayfasının temel ihtiyaçları ===
+1) url adresinin olması gerekir.
+2) fonksiyonun olması gerekir.
+
+=== TEMPLATES ve STATIC ===
+oluşturduğumuz appMy içerisine klasör olarak açarız
+HTML => templates
+CSS,JS... => static
